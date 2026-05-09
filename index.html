@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="Images/YuumiiIcon.jpg">
+  <link rel="stylesheet" href="src/index.css">
+  <title>Yummii!</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <div class="container navbar-container">
+      <div class="logo">
+        <a href="#home" class="logo-text">Yuumii!</a>
+      </div>
+
+      <!-- Desktop Menu Links (Centered) -->
+      <div class="nav-links desktop-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+      </div>
+
+      <!-- Desktop Menu Actions (Right) -->
+      <div class="nav-actions desktop-menu">
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+        <a href="#inquiry" class="btn btn-primary nav-inquiry-btn">Inquiry</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="mobile-menu-controls">
+        <button class="theme-toggle">🌓</button>
+        <button id="mobile-menu-btn" class="menu-btn">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu hidden">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#menu" class="mobile-nav-link">Menu</a>
+      <a href="#gallery" class="mobile-nav-link">Gallery</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-split kakanin-hero">
+      <div class="hero-bg-overlay">
+        <img src="Images/Cupcake-hero.jpg" alt="Kakanin Background" class="hero-bg-img" />
+      </div>
+      <div class="hero-content kakanin-content">
+        <span class="hero-subtitle kakanin-subtitle">Yuumii's Special</span>
+        <h2 class="hero-title">Sweet Cupcake Creations</h2>
+        <p class="hero-desc">Custom cupcakes and dessert treats carefully made to bring joy, sweetness, and unforgettable moments.</p>
+        <a href="#menu" class="btn btn-outline-sage">Browse Cupcakes</a>
+      </div>
+    </div>
+
+    <div class="hero-split cake-hero">
+       <div class="hero-bg-overlay">
+         <img src="Images/hero-cake.jpg" alt="Cake Background" class="hero-bg-img" />
+      </div>
+      <div class="hero-content cake-content">
+        <span class="hero-subtitle cake-subtitle">Yuumii's Cake Studio</span>
+        <h2 class="hero-title">Premium Customized Cakes</h2>
+        <p class="hero-desc">Elegant designs for birthdays, weddings, and debuts. Made with love and the finest ingredients.</p>
+        <div class="hero-buttons">
+          <a href="#inquiry" class="btn btn-primary">Order Cake</a>
+          <a href="#gallery" class="btn btn-outline-gold">Gallery</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section pt-20 animate-on-scroll fade-up">
+    <div class="container about-container">
+      <div class="about-image-wrapper">
+        <div class="about-image-box">
+           <img src="Images/About-owner.jpg" alt="Nanay Cel" />
+           <div class="about-image-border"></div>
+        </div>
+      </div>
+      
+      <div class="about-text-content">
+        <div class="section-tag">Our Story</div>
+        <h2 class="section-title">Meet The Owner</h2>
+        <p class="section-desc">Hi! I’m the owner and creator behind Yuumii — a small business built with passion, creativity, and love for baking. <br> <br>
+        What started as a simple hobby quickly became something bigger when I discovered how much joy customized cakes and cupcakes can bring to every celebration. From birthdays and weddings to simple sweet cravings, I love creating desserts that not only taste delicious but also make special moments even more memorable.</p>
+        <p class="section-desc mt-4">Every cake and cupcake is carefully designed with attention to detail, using quality ingredients and creative ideas to match each customer’s vision. I enjoy turning themes, colors, and inspirations into edible art that people can truly enjoy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section pt-20 animate-on-scroll fade-up">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title text-center">Our Menu</h2>
+        <p class="section-desc text-center">From delightful cupcakes to elegant customized cakes, explore our carefully crafted sweet creations made for every celebration.</p>
+      </div>
+
+      <div class="menu-categories mt-10">
+        <!-- Cupcake Category -->
+        <div class="menu-category">
+          <div class="category-header">
+            <h3 class="category-title">Our Cupcakes</h3>
+            <div class="header-line sage-line"></div>
+          </div>
+          <div class="menu-slider-wrapper">
+            <div class="slider-controls side-controls">
+              <button class="slider-btn prev-btn" data-target="kakanin-slider" aria-label="Previous slide">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button class="slider-btn next-btn" data-target="kakanin-slider" aria-label="Next slide">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+            <div class="menu-grid mt-4" id="kakanin-slider">
+              <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/1Cupcakes.jpg" alt="Vanilla Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Vanilla Cupcake</h4>
+                   <span class="price mt-1 text-sm">₱400.00</span>
+                </div>
+                <p class="mb-4 mt-2">Soft and fluffy vanilla cupcake topped with smooth and creamy vanilla frosting.</p>
+              </div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/2Cupcakes.jpg" alt="Cookies & Cream Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Cookies & Cream Cupcake</h4>
+                   <span class="price mt-1 text-sm">₱380.00</span>
+                </div>
+                <p class="mb-4 mt-2">Rich chocolate cupcake blended with crushed cookies and finished with cookies & cream frosting.</p>
+              </div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/3Cupcakes.jpg" alt="Vanilla Cookie Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Vanilla Cookie Cupcake</h4>
+                   <span class="price mt-1 text-sm">₱150</span>
+                </div>
+                <p class="mb-4 mt-2">Classic vanilla cupcake topped with sweet cookie crumbs and creamy buttercream frosting.</p>
+              </div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/4Cupcakes.jpg" alt="Biscoff Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Biscoff Cupcake</h4>
+                   <span class="price mt-1 text-sm">₱250</span>
+                </div>
+                <p class="mb-4 mt-2">Moist cupcake infused with caramelized Biscoff flavor and topped with cookie butter frosting.</p>
+              </div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/5Cupcakes.jpg" alt="Strawberry Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Strawberry Cupcake</h4>
+                   <span class="price mt-1 text-sm">₱120</span>
+                </div>
+                <p class="mb-4 mt-2">Light and fruity cupcake made with strawberry flavor and finished with pink creamy frosting.</p>
+              </div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/6Cupcakes.jpg" alt="Cherry Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Cherry Cupcake</h4>
+                   <span class="price mt-1 text-sm">₱140</span>
+                </div>
+                <p class="mb-4 mt-2">Sweet cherry-flavored cupcake topped with silky frosting and a cherry garnish.</p>
+              </div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/7Cupcake.jpg" alt="Lemon & Rose Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Lemon & Rose Cupcake</h4>
+                   <span class="price mt-1 text-sm">₱130</span>
+                </div>
+                <p class="mb-4 mt-2">Refreshing lemon cupcake with subtle floral rose notes for a delicate and elegant flavor.</p>
+              </div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/8CupCakes.jpg" alt="Ricotta Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Ricotta Cupcake</h4>
+                   <span class="price mt-1 text-sm">₱110</span>
+                </div>
+                <p class="mb-4 mt-2">Soft and creamy ricotta-infused cupcake with a rich texture and lightly sweet finish.</p>
+              </div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/9Cupcakes.jpg" alt="Moana Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Moana Cupcake</h4>
+                   <span class="price mt-1 text-sm">₱100</span>
+                </div>
+                <p class="mb-4 mt-2">Tropical-inspired cupcake decorated with vibrant island-themed toppings perfect for celebrations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Demon Slayer-->
+        <div class="menu-category">
+          <div class="category-header">
+            <h3 class="category-title">Demon Slayer Inspired</h3>
+            <div class="header-line sage-line"></div>
+          </div>
+          <div class="menu-slider-wrapper">
+            <div class="slider-controls side-controls">
+              <button class="slider-btn prev-btn" data-target="kakanin-slider" aria-label="Previous slide">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button class="slider-btn next-btn" data-target="kakanin-slider" aria-label="Next slide">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+            <div class="menu-grid mt-4" id="kakanin-slider">
+              <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/1DemonSlayer.jpg " alt="Vanilla Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Demon Slayer 1</h4>
+                   <span class="price mt-1 text-sm">₱400.00</span>
+                </div>
+                <p class="mb-4 mt-2">Anime-inspired customized cake featuring bold colors and iconic Demon Slayer elements perfect for fans and birthdays.</p>
+              </div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/2DemonSlayer.jpg" alt="Cookies & Cream Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Demon Slayer 2</h4>
+                   <span class="price mt-1 text-sm">₱380.00</span>
+                </div>
+                <p class="mb-4 mt-2">Stylish themed cake with detailed decorations inspired by the adventurous world of Demon Slayer.</p>
+              </div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/3DemonSlayer.jpg" alt="Vanilla Cookie Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Demon Slayer 3</h4>
+                   <span class="price mt-1 text-sm">₱150</span>
+                </div>
+                <p class="mb-4 mt-2">Vibrant celebration cake designed with striking anime aesthetics and handcrafted details.</p>
+              </div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/4DemonSlayer.jpg" alt="Biscof Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Demon Slayer 4</h4>
+                   <span class="price mt-1 text-sm">₱250</span>
+                </div>
+                <p class="mb-4 mt-2">Customized layered cake featuring dramatic colors and character-inspired decorations.</p>
+              </div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/5DemonSlayer.jpg" alt="Strawberry Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Demon Slayer 5</h4>
+                   <span class="price mt-1 text-sm">₱120</span>
+                </div>
+                <p class="mb-4 mt-2">Eye-catching themed cake crafted for anime lovers with creative edible art and smooth frosting.</p>
+              </div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-img">
+                <img src="Images/6DemonSlayer.jpg" alt="Cherry Cupcake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Demon Slayer 6</h4>
+                   <span class="price mt-1 text-sm">₱140</span>
+                </div>
+                <p class="mb-4 mt-2">Elegant anime cake with premium finishing, perfect for birthdays and special occasions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cakes Category -->
+        <div class="menu-category mt-8">
+           <div class="category-header">
+            <h3 class="category-title">Premium Customized Cakes</h3>
+            <div class="header-line pink-line"></div>
+          </div>
+          <div class="menu-slider-wrapper">
+            <div class="slider-controls side-controls">
+              <button class="slider-btn prev-btn" data-target="cakes-slider" aria-label="Previous slide">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button class="slider-btn next-btn" data-target="cakes-slider" aria-label="Next slide">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+            <div class="menu-grid mt-4" id="cakes-slider">
+              <div class="menu-card cake-card">
+              <div class="menu-card-img">
+                <img src="Images/2Birthday.jpg" alt="Minimalist Celebration Cake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Minimalist Birthday Cake</h4>
+                   <span class="price mt-1 text-sm">Starts at ₱2,200</span>
+                </div>
+                <p class="mb-4 mt-2">Clean and elegant birthday cake with simple designs and modern aesthetic finishing.</p>
+                <a href="#inquiry" class="inquire-link pink-link">Inquire Now &rarr;</a>
+              </div>
+            </div>
+            <div class="menu-card cake-card">
+              <div class="menu-card-img">
+                <img src="Images/1Wedding.jpg" alt="Floral Tiered Wedding Cake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Elegant Wedding Cake</h4>
+                   <span class="price mt-1 text-sm">Starts at ₱4,500</span>
+                </div>
+                <p class="mb-4 mt-2">Beautifully crafted wedding cake featuring sophisticated details and timeless elegance.</p>
+                <a href="#inquiry" class="inquire-link pink-link">Inquire Now &rarr;</a>
+              </div>
+            </div>
+            <div class="menu-card cake-card">
+              <div class="menu-card-img">
+                <img src="Images/1OnePiece.jpg" alt="Chocolate Ganache Overload" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Anime Inspired Cake</h4>
+                   <span class="price mt-1 text-sm">Starts at ₱2,500</span>
+                </div>
+                <p class="mb-4 mt-2">Customized anime-themed cake designed with vibrant colors and creative character-inspired elements.</p>
+                <a href="#inquiry" class="inquire-link pink-link">Inquire Now &rarr;</a>
+              </div>
+            </div>
+            <div class="menu-card cake-card">
+              <div class="menu-card-img">
+                <img src="Images/3Birthday.jpg" alt="Ube Bloom Dream" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Elegant Birthday Cake</h4>
+                   <span class="price mt-1 text-sm">Starts at ₱2,350</span>
+                </div>
+                <p class="mb-4 mt-2">Stylish celebration cake with smooth frosting, delicate decorations, and luxurious finishing.</p>
+                <a href="#inquiry" class="inquire-link pink-link">Inquire Now &rarr;</a>
+              </div>
+            </div>
+            <div class="menu-card cake-card">
+              <div class="menu-card-img">
+                <img src="Images/3KidsBirtday.jpg" alt="Red Velvet Classic" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Superhero Kid's Cake</h4>
+                   <span class="price mt-1 text-sm">Starts at ₱2,400</span>
+                </div>
+                <p class="mb-4 mt-2">Fun and colorful superhero-themed cake perfect for kids who love action and adventure.</p>
+                <a href="#inquiry" class="inquire-link pink-link">Inquire Now &rarr;</a>
+              </div>
+            </div>
+            <div class="menu-card cake-card">
+              <div class="menu-card-img">
+                <img src="Images/5Birthday.jpg" alt="Bento Lunchbox Cake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Simple Purple Birthday Cake</h4>
+                   <span class="price mt-1 text-sm">₱1,450</span>
+                </div>
+                <p class="mb-4 mt-2">Charming purple-themed birthday cake with minimalist decorations and soft creamy frosting.</p>
+                <a href="#inquiry" class="inquire-link pink-link">Inquire Now &rarr;</a>
+              </div>
+            </div>
+            <div class="menu-card cake-card">
+              <div class="menu-card-img">
+                <img src="Images/15Wedding.jpg" alt="Mocha Chiffon Delight" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>2 Tier Elegant Wedding Cake</h4>
+                   <span class="price mt-1 text-sm">Starts at ₱3,100</span>
+                </div>
+                <p class="mb-4 mt-2">Sophisticated two-tier wedding cake designed with graceful details for memorable celebrations.</p>
+                <a href="#inquiry" class="inquire-link pink-link">Inquire Now &rarr;</a>
+              </div>
+            </div>
+            <div class="menu-card cake-card">
+              <div class="menu-card-img">
+                <img src="Images/8Birthday.jpg" alt="Pastel Rainbow Whimsy" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Butterfly Design Cake</h4>
+                   <span class="price mt-1 text-sm">Starts at ₱2,600</span>
+                </div>
+                <p class="mb-4 mt-2">Delightful cake decorated with elegant butterfly accents and soft pastel aesthetics.</p>
+                <a href="#inquiry" class="inquire-link pink-link">Inquire Now &rarr;</a>
+              </div>
+            </div>
+            <div class="menu-card cake-card">
+              <div class="menu-card-img">
+                <img src="Images/13Wedding.jpg" alt="Gold Leaf Majesty" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>3 Tier Wedding Cake</h4>
+                   <span class="price mt-1 text-sm">Starts at ₱4,299</span>
+                </div>
+                <p class="mb-4 mt-2">Stunning three-tier wedding cake crafted for grand celebrations and elegant receptions.</p>
+                <a href="#inquiry" class="inquire-link pink-link">Inquire Now &rarr;</a>
+              </div>
+            </div>
+            <div class="menu-card cake-card">
+              <div class="menu-card-img">
+                <img src="Images/10Birthday.jpg" alt="Fruity Summer Fresh" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Simple Ribbon Cake</h4>
+                   <span class="price mt-1 text-sm">Starts at ₱2,250</span>
+                </div>
+                <p class="mb-4 mt-2">Minimalist cake featuring delicate ribbon-inspired decorations and smooth buttercream finishing.</p>
+                <a href="#inquiry" class="inquire-link pink-link">Inquire Now &rarr;</a>
+              </div>
+            </div>
+            <div class="menu-card cake-card">
+              <div class="menu-card-img">
+                <img src="Images/11Birthday.jpg" alt="Character Themed Birthday" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Creamy Birthday Cake</h4>
+                   <span class="price mt-1 text-sm">Starts at ₱2,300</span>
+                </div>
+                <p class="mb-4 mt-2">Rich and creamy celebration cake with soft textures and beautifully piped frosting.</p>
+                <a href="#inquiry" class="inquire-link pink-link">Inquire Now &rarr;</a>
+              </div>
+            </div>
+            <div class="menu-card cake-card">
+              <div class="menu-card-img">
+                <img src="Images/8Wedding.jpg" alt="Heart Engagement Cake" />
+              </div>
+              <div class="menu-card-content">
+                <div class="menu-card-header flex-col">
+                   <h4>Funny 3 Tier Wedding Cake</h4>
+                   <span class="price mt-1 text-sm">Starts at ₱4,899</span>
+                </div>
+                <p class="mb-4 mt-2">Playful three-tier wedding cake combining elegant layers with fun and creative themed details.</p>
+                <a href="#inquiry" class="inquire-link pink-link">Inquire Now &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery-section pt-20 pb-20 animate-on-scroll fade-up">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title text-center">Customization Gallery</h2>
+        <p class="section-desc text-center">A portfolio of our favorite bespoke cake creations, tailored for every special moment.</p>
+      </div>
+
+      <div class="gallery-filters mt-8" id="gallery-filters">
+        <button data-filter="All" class="filter-btn active">All</button>
+        <button data-filter="Weddings" class="filter-btn">Weddings</button>
+        <button data-filter="Birthdays" class="filter-btn">Birthdays</button>
+        <button data-filter="Cupcake" class="filter-btn">Cupcakes</button>
+        <button data-filter="AnimeInspired" class="filter-btn">Anime Inspired</button>
+      </div>
+
+      <div class="gallery-slider-wrapper mt-8">
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Weddings (8) -->
+          <div class="gallery-item" data-category="Weddings">
+            <img src="Images/1Wedding.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Weddings">
+            <img src="Images/3Wedding.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Weddings">
+            <img src="Images/4Wedding.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Weddings">
+            <img src="Images/6Wedding.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Weddings">
+            <img src="Images/7Wedding.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Weddings">
+            <img src="Images/8Wedding.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Weddings">
+            <img src="Images/9Wedding.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Weddings">
+            <img src="Images/10Wedding.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Weddings">
+            <img src="Images/11Wedding.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Weddings">
+            <img src="Images/13Wedding.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Weddings">
+            <img src="Images/14Wedding.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Weddings">
+            <img src="Images/15Wedding.jpg"/>
+          </div>
+
+          <!-- Birthdays (8) -->
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/1KidsBirtday.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/2KidsBirtday.jpg"/>
+          </div>          
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/3KidsBirtday.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/4KidsBirtday.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/5KidsBirtday.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/6KidsBirtday.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/1Birthday.jpg"/>
+          </div>          
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/2Birthday.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/3Birthday.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/4Birthday.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/5Birthday.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/6Birthday.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/7Birthday.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Birthdays">
+            <img src="Images/8Birthday.jpg"/>
+          </div>
+          
+          
+          <!-- Anime Inspired -->
+          <div class="gallery-item" data-category="AnimeInspired">
+            <img src="Images/1DemonSlayer.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="AnimeInspired">
+            <img src="Images/2DemonSlayer.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="AnimeInspired">
+            <img src="Images/3DemonSlayer.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="AnimeInspired">
+            <img src="Images/4DemonSlayer.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="AnimeInspired">
+            <img src="Images/5DemonSlayer.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="AnimeInspired">
+            <img src="Images/1OnePiece.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="AnimeInspired">
+            <img src="Images/2OnePiece.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="AnimeInspired">
+            <img src="Images/3OnePiece.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="AnimeInspired">
+            <img src="Images/4OnePiece.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="AnimeInspired">
+            <img src="Images/5OnePiece.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="AnimeInspired">
+            <img src="Images/6OnePiece.jpg"/>
+          </div>
+
+          <div class="gallery-item" data-category="Cupcake">
+            <img src="Images/1Cupcakes.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Cupcake">
+            <img src="Images/2Cupcakes.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Cupcake">
+            <img src="Images/3Cupcakes.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Cupcake">
+            <img src="Images/4Cupcakes.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Cupcake">
+            <img src="Images/5Cupcakes.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Cupcake">
+            <img src="Images/6Cupcakes.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Cupcake">
+            <img src="Images/7Cupcake.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Cupcake">
+            <img src="Images/8CupCakes.jpg"/>
+          </div>
+          <div class="gallery-item" data-category="Cupcake">
+            <img src="Images/9Cupcakes.jpg"/>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="reviews" class="testimonials-section py-20 animate-on-scroll fade-up">
+    <div class="container section-header text-center">
+      <h2 class="section-title text-center">What They Say</h2>
+      <p class="section-desc text-center">Words from our beloved customers who made our cakes part of their special moments.</p>
+    </div>
+
+    <!-- Marquee -->
+    <div class="testimonial-marquee-wrapper mt-10">
+      <div class="testimonial-marquee">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Yuumii! turned our vision into a stunning anime-inspired cake. Every detail was precise, and the flavor was just as impressive as the design."</p>
+          <div class="reviewer">
+             <div class="avatar" style="background-color: var(--color-sage); color: white;">A</div>
+            <div class="reviewer-info">
+              <p class="name">Angelo Bayugbayugan Jr.</p>
+              <p class="role">Facebook Client</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"The cupcakes from Yuumii! are a perfect blend of softness and sweetness. Each bite feels freshly made with love and care."</p>
+          <div class="reviewer">
+            <div class="avatar" style="background-color: var(--color-gold); color: white;">J</div>
+            <div class="reviewer-info">
+              <p class="name">Jasmine A.</p>
+              <p class="role">Regular Customer</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Yuumii! created a birthday cake that felt truly personal and special. The design matched exactly what we wanted and tasted even better than expected."</p>
+          <div class="reviewer">
+            <div class="avatar" style="background-color: var(--color-pink); color: white;">N</div>
+            <div class="reviewer-info">
+              <p class="name">Neneng B.</p>
+              <p class="role">Facebook Client</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Yuumii! created a birthday cake that felt truly personal and special. The design matched exactly what we wanted and tasted even better than expected."</p>
+          <div class="reviewer">
+            <div class="avatar" style="background-color: var(--color-brown-light); color: white;">Z</div>
+            <div class="reviewer-info">
+              <p class="name">Zee B. Dee</p>
+              <p class="role">Instagram Client</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-marquee" aria-hidden="true">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Yuumii! created the perfect customized birthday cake for our celebration. The design was beautiful and every slice tasted amazing."</p>
+          <div class="reviewer">
+            <div class="avatar" style="background-color: var(--color-sage); color: white;">M</div>
+            <div class="reviewer-info">
+              <p class="name">Maria Santos</p>
+              <p class="role">Wedding Client</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"The cupcakes from Yuumii! were soft, flavorful, and absolutely adorable. Everyone at the party kept asking where we ordered them."</p>
+          <div class="reviewer">
+           <div class="avatar" style="background-color: var(--color-gold); color: white;">J</div>
+            <div class="reviewer-info">
+              <p class="name">Josephine T.</p>
+              <p class="role">Loyal Customer</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"We ordered an anime-inspired cake from Yuumii! and the details were incredible. It looked exactly like the reference and tasted delicious too."</p>
+          <div class="reviewer">
+            <div class="avatar" style="background-color: var(--color-pink); color: white;">R</div>
+            <div class="reviewer-info">
+              <p class="name">Rochelle G.</p>
+              <p class="role">Birthday Client</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Yuumii! made our wedding cake elegant and memorable. The cake looked premium, tasted fresh, and completed our special day perfectly."</p>          <div class="reviewer">
+            <div class="avatar" style="background-color: var(--color-brown-light); color: white;">A</div>
+            <div class="reviewer-info">
+              <p class="name">Anton L.</p>
+              <p class="role">Corporate Client</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry Modal -->
+  <div id="inquiry-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <button id="close-inquiry" class="modal-close-btn">&times;</button>
+      
+      <div class="modal-body">
+        <div class="modal-header">
+          <h2>Yuumii!'s Order Form</h2>
+          <p class="modal-subtitle">Please fill out the details below to request a custom cake.</p>
+          <p class="required-note mt-2">* Required fields</p>
+        </div>
+        
+        <form class="order-form" id="order-form">
+          <!-- Honeypot -->
+          <input type="text" id="fax_number" style="display:none !important" tabindex="-1" autocomplete="off" />
+          
+          <div class="form-section">
+            <h3 class="form-section-header">Customer Details</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Name *</label>
+                <input type="text" id="order-name" placeholder="Full Name" required />
+              </div>
+              <div class="form-group">
+                <label>Contact Number *</label>
+                <input type="tel" id="order-contact" placeholder="09XX-XXX-XXXX" required />
+              </div>
+              <div class="form-group">
+                <label>Address *</label>
+                <input type="text" id="order-address" placeholder="Exact Delivery Address" required />
+              </div>
+              <div class="form-group">
+                <label>Celebration (e.g. Birthday, Wedding) *</label>
+                <input type="text" id="order-celebration" placeholder="What's the occasion?" required />
+              </div>
+            </div>
+          </div>
+ 
+          <div class="form-section">
+            <h3 class="form-section-header">Order Details</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Design/Themed *</label>
+                <input type="text" id="order-design" placeholder="Theme or design description" required />
+              </div>
+              <div class="form-group">
+                <label>Base Cake (Flavor) *</label>
+                <select id="order-base" required>
+                  <option value="">Select Flavor</option>
+                  <optgroup label="Chiffon Cake">
+                    <option value="Chiffon - Vanilla">Vanilla</option>
+                    <option value="Chiffon - Mocha">Mocha</option>
+                    <option value="Chiffon - Chocolate">Chocolate</option>
+                    <option value="Chiffon - Choco Marble">Choco Marble</option>
+                    <option value="Chiffon - Ube">Ube</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Dedication (Text on cake)</label>
+                <input type="text" id="order-dedication" placeholder="Happy Birthday..." />
+              </div>
+              <div class="form-group">
+                <label>Size *</label>
+                <select id="order-size" required>
+                  <option value="">Select Size</option>
+                  <optgroup label="Round Cake">
+                    <option value="Round 6x3 (P900)">6x3 (P900)</option>
+                    <option value="Round 7x3 (P1,100)">7x3 (P1,100)</option>
+                    <option value="Round 8x3 (P1,400)">8x3 (P1,400)</option>
+                  </optgroup>
+                  <optgroup label="2 Tier Cake">
+                    <option value="2-Tier 4x3 & 6x3 (P1,600)">4x3 & 6x3 (P1,600)</option>
+                    <option value="2-Tier 5x3 & 7x4 (P2,000)">5x3 & 7x4 (P2,000)</option>
+                    <option value="2-Tier 6x3 & 8x4 (P2,950)">6x3 & 8x4 (P2,950)</option>
+                  </optgroup>
+                  <optgroup label="Bento Cake">
+                    <option value="Bento 4x2 (P400)">4x2 (P400)</option>
+                  </optgroup>
+                  <optgroup label="Milestone Cake">
+                    <option value="Milestone 10inch (P850)">10 inch (1 digit) (P850)</option>
+                  </optgroup>
+                  <optgroup label="Cupcakes">
+                    <option value="Cupcakes 12s 2oz (P550)">12's per box (2oz) (P550)</option>
+                    <option value="Cupcakes 12s 3oz (P650)">12's per box (3oz) (P650)</option>
+                  </optgroup>
+                  <optgroup label="Pull Apart Cupcake">
+                    <option value="Pull Apart 1 digit 3oz (P700)">1 digit (3oz) (P700)</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Color Palette *</label>
+                <input type="text" id="order-color" placeholder="Pastel pink, blue, gold etc." required />
+              </div>
+              <div class="form-group">
+                <label>Date & Time *</label>
+                <input type="datetime-local" id="order-date" required />
+              </div>
+              <div class="form-group">
+                <label>Delivery or Pick-up? *</label>
+                <select id="order-delivery" required>
+                  <option value="">Select Option</option>
+                  <option value="Pick-up">Pick-up</option>
+                  <option value="Delivery">Delivery</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <p class="redirect-note mt-4">Upon clicking the submit button you will be redirected to Facebook Messenger, paste text to complete the order.</p>
+          <button type="submit" class="btn btn-primary submit-btn mt-2 full-width py-12">Submit Order Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section py-16 animate-on-scroll fade-up">
+    <div class="container overflow-hidden">
+      <div class="section-header text-center">
+        <h2 class="section-title text-center">Frequently Asked Questions</h2>
+        <p class="section-desc text-center">Everything you need to know about ordering your favorite treats.</p>
+      </div>
+      
+      <div class="faq-accordion mt-10">
+        <div class="faq-item">
+          <button class="faq-question">How do I place an order? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>Simply click any "Order Now" or "Inquiry" button to open our order form. Once submitted, your order details are copied, and you'll be redirected to our Facebook Messenger. Just paste the details and send! We'll confirm your order and send payment instructions there.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">What are your payment methods? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>We accept payments via GCash, Maya, and Bank Transfers (BDO/BPI). We require a 50% downpayment to secure your slot, and the balance is settled upon delivery or pick-up.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">Do you offer delivery? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>Yes! We offer delivery within Metro Manila and nearby provinces. Delivery fees depend on your location and are handled via third-party couriers (Lalamove/Grab). For tiered cakes, we recommend GrabCar to ensure safe transport.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">How much lead time do you need? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>For custom cakes, we recommend ordering at least 5-7 days in advance. For Kakanin bilao, 2-3 days is usually sufficient. We do occasionally have slots for rush orders, so feel free to message us!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="lightbox-overlay hidden">
+    <button id="close-lightbox" class="lightbox-close-btn">&times;</button>
+    <img id="lightbox-img" src="" alt="Full view image" />
+  </div>
+
+  <footer class="footer pt-20 pb-10">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+      <a href="#home" class="logo-text">Yuumii!</a>
+      <p class="footer-desc mt-4">Baking bespoke cakes and pastries with warmth and elegant design—made to make every celebration special with Yuumii!</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul class="mt-4">
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#menu">Our Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#faq">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <ul class="mt-4">
+          <li class="flex items-start gap-4">
+            <span class="contact-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </span>
+            <span>+63 912 345 6789</span>
+          </li>
+          <li class="flex items-start gap-4 mt-3">
+            <span class="contact-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </span>
+            <span>Yuumii.delight@gmail.com</span>
+          </li>
+          <li class="flex items-start gap-4 mt-3">
+            <span class="contact-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </span>
+            <span>Silangan, San Mateo, <br>Rizal, Philippines</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <p class="text-sm opacity-70 mb-4">Stay updated with our latest designs and treats!</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="social-link">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-link">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center mt-10">
+       &copy; <span id="current-year"></span> Yummiii. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="src/animations.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
